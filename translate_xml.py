@@ -28,7 +28,7 @@ for row_index, row in enumerate(root.findall('.//Row')):
         original_text = cells[i].text
         translated_text = translate_text(original_text)
         cells[i].text = translated_text
-        time.sleep(0.2)  # Tambahkan jeda waktu 1 detik untuk menghindari batasan API
+        time.sleep(0.1)  # Tambahkan jeda waktu 1 detik untuk menghindari batasan API
     print(f"Translated row {row_index + 1} of {total_rows}")
 
 # Simpan hasil terjemahan ke file baru
