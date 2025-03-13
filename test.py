@@ -6,7 +6,7 @@ import time
 translator = Translator()
 
 # Baca file XML
-tree = ET.parse('c:\\Users\\adu\\Downloads\\Compressed\\English_xml_extracted\\text_rich_presence.xml')
+tree = ET.parse('text_rich_presence.xml')
 root = tree.getroot()
 
 # Fungsi untuk menerjemahkan teks dengan penanganan kesalahan
@@ -32,6 +32,6 @@ for row_index, row in enumerate(root.findall('.//Row')):
     print(f"Translated row {row_index + 1} of {total_rows}")
 
 # Simpan hasil terjemahan ke file baru
-output_file = 'c:\\Users\\adu\\Downloads\\Compressed\\English_xml_extracted\\text_rich_presence_translated.xml'
+output_file = 'text_rich_presence_translated.xml'
 tree.write(output_file, encoding='utf-8', xml_declaration=True)
 print(f"Translation completed. Translated file saved as {output_file}")
